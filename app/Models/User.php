@@ -16,7 +16,18 @@ class User extends Authenticatable {
         return $this->belongsToMany(Role::class);
     }
 
-    public function permissions() {
+    public function permissions()
+    {
         return $this->belongsToMany(Permission::class);
     }
+
+    // Retrieve all permissions (roles + direct permissions)
+    public function allPermissions()
+    {
+        $rolePermissions = $this->roles()->with('permissions')->get()->pluck('permissions')->flatten();
+        $directPermissions = $this->permissions()->get();
+        return $rolePermissions->merge($directPermissions)->unique('id');
+    }
+
+
 }

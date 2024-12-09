@@ -22,12 +22,38 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PermissionController;
+
+
+// Public Routes
 Route::post('/login', [AuthController::class, 'login']);
 
+
 Route::middleware('auth:api')->group(function () {
+
+    // User Management
     Route::get('/users', [UserController::class, 'index']);
     Route::get('/users/{id}', [UserController::class, 'show']);
     Route::post('/users', [UserController::class, 'store']);
     Route::put('/users/{id}', [UserController::class, 'update']);
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
+
+    // Role and Permission Management with Permission Middleware
+    Route::middleware(['auth:api', 'permission:edit_users'])->group(function () {
+
+        // Role Management
+        Route::post('/roles', [RoleController::class, 'store']);
+        Route::post('/users/{id}/roles', [RoleController::class, 'assignRoleToUser']);
+        
+        // Permission Management
+        Route::post('/permissions', [PermissionController::class, 'store']);
+        Route::post('/roles/{id}/permissions', [PermissionController::class, 'assignPermissionToRole']);
+    
+    });
+     
+
 });
+
+
+

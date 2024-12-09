@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "7013d810-1f8d-4250-beb2-9ca604409dcc",
+		"name": "User Role API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24755036"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET Users List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWFhMTg3NzY3ZTY3NzZhNzNhMjBjYzkxMGQ5YTgwNmRiOTY0NmUxMjMyNWNhOTg1OTc0NTI3ZDA4MmYzNTk5ZmI4NTFlMDBiZmNiNWVkYjgiLCJpYXQiOjE3MzM3MjM3MDcuNTI0NDcyLCJuYmYiOjE3MzM3MjM3MDcuNTI0NDczLCJleHAiOjE3NjUyNTk3MDcuNTIwMTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XHzW1XXZHr_zBQMuZnCkkTqwEUY7f3feG0mlStsnwxJm2yLcCdZIC7tImkUxvB2UcBX4W1kQEY_5uhYcLd7TwhjWVdpieKC13C5KoehVvT81oIgQ3nYHifWLbbqVBYu7Fm5cGLGbbQSoo4thUtbfruUAXKAhsy7np318ZYIq9ITyksCL1t-7zCBN8ktmj3tV7LGbbQN_wu77TJJVbZhl_jKWxEQDaZO5zCm0VIt6HXadAjw1XCqIfDYD151XGdc-hARjpGqD72K0Ln_coSHYek98Oas4eTfNRCMCKzsLel3dDrLBwx3YhY2QbDKDBgUD5m-xIw-ciUF7vRW4xvMhy3TFJIwzi5jLNEQ59I8sQGu3ENq07ZulqV0yp7BBO6JbZP7BkkILaKT5oZnfw0NSb-n7w-17IQeluLAKdhBNA8zwrpCApwZEYJaf4ljHqn-w6ea-g5DjaJiggByx1RsgxP2zrW0QYzkwZcZ1NbQlWNwzY7KV9Xsagee_RRAfrTi-oxeiel4-bRNtDhUvCBOJI5ZPvCbE8NuP3UY2ekE7UOrGMaS6_yD0t_g3U8HRQGOGZtfKVEz-JGuRveocQvU29EWRi_-z6YhEXroJkVC_s1FGRS96RjGrhjxgAvC1ZgC0KTFW_-iEDWo6OpDEbReODsUuAtKwSUmVe3Qh5OqnpOc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWFhMTg3NzY3ZTY3NzZhNzNhMjBjYzkxMGQ5YTgwNmRiOTY0NmUxMjMyNWNhOTg1OTc0NTI3ZDA4MmYzNTk5ZmI4NTFlMDBiZmNiNWVkYjgiLCJpYXQiOjE3MzM3MjM3MDcuNTI0NDcyLCJuYmYiOjE3MzM3MjM3MDcuNTI0NDczLCJleHAiOjE3NjUyNTk3MDcuNTIwMTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XHzW1XXZHr_zBQMuZnCkkTqwEUY7f3feG0mlStsnwxJm2yLcCdZIC7tImkUxvB2UcBX4W1kQEY_5uhYcLd7TwhjWVdpieKC13C5KoehVvT81oIgQ3nYHifWLbbqVBYu7Fm5cGLGbbQSoo4thUtbfruUAXKAhsy7np318ZYIq9ITyksCL1t-7zCBN8ktmj3tV7LGbbQN_wu77TJJVbZhl_jKWxEQDaZO5zCm0VIt6HXadAjw1XCqIfDYD151XGdc-hARjpGqD72K0Ln_coSHYek98Oas4eTfNRCMCKzsLel3dDrLBwx3YhY2QbDKDBgUD5m-xIw-ciUF7vRW4xvMhy3TFJIwzi5jLNEQ59I8sQGu3ENq07ZulqV0yp7BBO6JbZP7BkkILaKT5oZnfw0NSb-n7w-17IQeluLAKdhBNA8zwrpCApwZEYJaf4ljHqn-w6ea-g5DjaJiggByx1RsgxP2zrW0QYzkwZcZ1NbQlWNwzY7KV9Xsagee_RRAfrTi-oxeiel4-bRNtDhUvCBOJI5ZPvCbE8NuP3UY2ekE7UOrGMaS6_yD0t_g3U8HRQGOGZtfKVEz-JGuRveocQvU29EWRi_-z6YhEXroJkVC_s1FGRS96RjGrhjxgAvC1ZgC0KTFW_-iEDWo6OpDEbReODsUuAtKwSUmVe3Qh5OqnpOc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Super Admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/roles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Role to User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Permission",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWFhMTg3NzY3ZTY3NzZhNzNhMjBjYzkxMGQ5YTgwNmRiOTY0NmUxMjMyNWNhOTg1OTc0NTI3ZDA4MmYzNTk5ZmI4NTFlMDBiZmNiNWVkYjgiLCJpYXQiOjE3MzM3MjM3MDcuNTI0NDcyLCJuYmYiOjE3MzM3MjM3MDcuNTI0NDczLCJleHAiOjE3NjUyNTk3MDcuNTIwMTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XHzW1XXZHr_zBQMuZnCkkTqwEUY7f3feG0mlStsnwxJm2yLcCdZIC7tImkUxvB2UcBX4W1kQEY_5uhYcLd7TwhjWVdpieKC13C5KoehVvT81oIgQ3nYHifWLbbqVBYu7Fm5cGLGbbQSoo4thUtbfruUAXKAhsy7np318ZYIq9ITyksCL1t-7zCBN8ktmj3tV7LGbbQN_wu77TJJVbZhl_jKWxEQDaZO5zCm0VIt6HXadAjw1XCqIfDYD151XGdc-hARjpGqD72K0Ln_coSHYek98Oas4eTfNRCMCKzsLel3dDrLBwx3YhY2QbDKDBgUD5m-xIw-ciUF7vRW4xvMhy3TFJIwzi5jLNEQ59I8sQGu3ENq07ZulqV0yp7BBO6JbZP7BkkILaKT5oZnfw0NSb-n7w-17IQeluLAKdhBNA8zwrpCApwZEYJaf4ljHqn-w6ea-g5DjaJiggByx1RsgxP2zrW0QYzkwZcZ1NbQlWNwzY7KV9Xsagee_RRAfrTi-oxeiel4-bRNtDhUvCBOJI5ZPvCbE8NuP3UY2ekE7UOrGMaS6_yD0t_g3U8HRQGOGZtfKVEz-JGuRveocQvU29EWRi_-z6YhEXroJkVC_s1FGRS96RjGrhjxgAvC1ZgC0KTFW_-iEDWo6OpDEbReODsUuAtKwSUmVe3Qh5OqnpOc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Permission to Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/permissions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Without Permission",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWFhMTg3NzY3ZTY3NzZhNzNhMjBjYzkxMGQ5YTgwNmRiOTY0NmUxMjMyNWNhOTg1OTc0NTI3ZDA4MmYzNTk5ZmI4NTFlMDBiZmNiNWVkYjgiLCJpYXQiOjE3MzM3MjM3MDcuNTI0NDcyLCJuYmYiOjE3MzM3MjM3MDcuNTI0NDczLCJleHAiOjE3NjUyNTk3MDcuNTIwMTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XHzW1XXZHr_zBQMuZnCkkTqwEUY7f3feG0mlStsnwxJm2yLcCdZIC7tImkUxvB2UcBX4W1kQEY_5uhYcLd7TwhjWVdpieKC13C5KoehVvT81oIgQ3nYHifWLbbqVBYu7Fm5cGLGbbQSoo4thUtbfruUAXKAhsy7np318ZYIq9ITyksCL1t-7zCBN8ktmj3tV7LGbbQN_wu77TJJVbZhl_jKWxEQDaZO5zCm0VIt6HXadAjw1XCqIfDYD151XGdc-hARjpGqD72K0Ln_coSHYek98Oas4eTfNRCMCKzsLel3dDrLBwx3YhY2QbDKDBgUD5m-xIw-ciUF7vRW4xvMhy3TFJIwzi5jLNEQ59I8sQGu3ENq07ZulqV0yp7BBO6JbZP7BkkILaKT5oZnfw0NSb-n7w-17IQeluLAKdhBNA8zwrpCApwZEYJaf4ljHqn-w6ea-g5DjaJiggByx1RsgxP2zrW0QYzkwZcZ1NbQlWNwzY7KV9Xsagee_RRAfrTi-oxeiel4-bRNtDhUvCBOJI5ZPvCbE8NuP3UY2ekE7UOrGMaS6_yD0t_g3U8HRQGOGZtfKVEz-JGuRveocQvU29EWRi_-z6YhEXroJkVC_s1FGRS96RjGrhjxgAvC1ZgC0KTFW_-iEDWo6OpDEbReODsUuAtKwSUmVe3Qh5OqnpOc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Manager\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/roles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
