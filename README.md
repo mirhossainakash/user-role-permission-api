@@ -30,8 +30,8 @@ Ensure you have the following installed:
 ### Steps to Install and Run
 
 1. Clone the repository:
-    git clone https://github.com/your-github-username/your-repository-name.git
-    cd your-repository-name
+    git clone https://github.com/mirhossainakash/user-role-permission-api.git
+    cd user-role-permission-api
 
 2. Install dependencies:
     composer install
