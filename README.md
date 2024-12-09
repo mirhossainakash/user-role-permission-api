@@ -14,57 +14,6 @@ This is a Laravel-based RESTful API for managing users, roles, and permissions. 
 
 ---
 
-
-## Project Directory Structure
-
-├── app
-│   ├── Console
-│   ├── Exceptions
-│   ├── Http
-│   │   ├── Controllers
-│   │   │   ├── AuthController.php
-│   │   │   ├── UserController.php
-│   │   │   ├── RoleController.php
-│   │   │   └── PermissionController.php
-│   │   ├── Middleware
-│   │   │   └── PermissionMiddleware.php
-│   ├── Models
-│   │   ├── User.php
-│   │   ├── Role.php
-│   │   └── Permission.php
-│   ├── Providers
-│   │   └── AppServiceProvider.php
-├── config
-│   ├── app.php
-│   └── auth.php
-├── database
-│   ├── migrations
-│   │   ├── xxxx_xx_xx_create_users_table.php
-│   │   ├── xxxx_xx_xx_create_roles_table.php
-│   │   ├── xxxx_xx_xx_create_permissions_table.php
-│   │   ├── xxxx_xx_xx_create_role_user_table.php
-│   │   └── xxxx_xx_xx_create_permission_user_table.php
-│   └── seeders
-│       ├── DatabaseSeeder.php
-│       └── RolesAndPermissionsSeeder.php
-├── public
-│   ├── index.php
-├── routes
-│   ├── api.php
-├── tests
-│   ├── Feature
-│   │   └── ExampleTest.php
-│   ├── Unit
-│       └── ExampleTest.php
-├── storage
-├── vendor
-├── .env
-├── composer.json
-├── package.json
-├── PostmanCollection.json
-└── README.md
-
-
 ## 🛠️ Installation Guide
 
 ### Prerequisites
@@ -102,3 +51,147 @@ Ensure you have the following installed:
 
 7. Start the server:
     php artisan serve
+
+
+### Tesating with Postman 
+
+1. Authenticate with Laravel Passport
+
+To interact with protected endpoints, you'll need to authenticate using Laravel Passport:
+Generate a Token
+
+    Add a POST request to your collection.
+    Set the URL:
+
+http://127.0.0.1:8000/api/login
+
+Go to the Body tab, select raw, and set the content type to JSON. Add the following JSON:
+
+    {
+        "email": "your_email@example.com",
+        "password": "your_password"
+    }
+
+    Click Send.
+        If successful, the response will contain an access token (e.g., Bearer abc123xyz).
+
+Save the Token for Future Requests
+
+    Copy the access_token from the response.
+    Go to your collection settings and add a Variable:
+        Variable: token
+        Initial Value: Bearer abc123xyz (replace with your token).
+    For all subsequent requests, use this token for authentication.
+
+2. Test Endpoints
+Example: Testing the User CRUD Endpoints
+
+    GET All Users
+        URL:
+
+http://127.0.0.1:8000/api/users
+
+Method: GET
+Go to the Headers tab and add:
+
+    Authorization: {{token}}
+
+    Click Send to view all users.
+
+GET a Specific User
+
+    URL:
+
+    http://127.0.0.1:8000/api/users/{id}
+
+    Replace {id} with the user ID (e.g., http://127.0.0.1:8000/api/users/1).
+    Use the same Authorization header.
+
+Create a User
+
+    URL:
+
+http://127.0.0.1:8000/api/users
+
+Method: POST
+Body:
+
+    {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "password": "password",
+        "roles": [1, 2]
+    }
+
+    Add Authorization header and click Send.
+
+Update a User
+
+    URL:
+
+http://127.0.0.1:8000/api/users/{id}
+
+Method: PUT
+Body:
+
+    {
+        "name": "John Updated",
+        "email": "john_updated@example.com",
+        "roles": [1]
+    }
+
+    Add Authorization header and click Send.
+
+Delete a User
+
+    URL:
+
+        http://127.0.0.1:8000/api/users/{id}
+
+        Method: DELETE
+        Add Authorization header and click Send.
+
+3. Testing Roles and Permissions
+Roles:
+
+    Create Role:
+        URL: http://127.0.0.1:8000/api/roles
+        Method: POST
+        Body:
+
+    {
+        "name": "Admin"
+    }
+
+Assign Role to User:
+
+    URL: http://127.0.0.1:8000/api/users/{id}/roles
+    Method: POST
+    Body:
+
+        {
+            "roles": [1]
+        }
+
+Permissions:
+
+    Create Permission:
+        URL: http://127.0.0.1:8000/api/permissions
+        Method: POST
+        Body:
+
+    {
+        "name": "edit_users"
+    }
+
+Assign Permission to Role:
+
+    URL: http://127.0.0.1:8000/api/roles/{id}/permissions
+    Method: POST
+    Body:
+
+        {
+            "permissions": [1]
+        }
+
+
