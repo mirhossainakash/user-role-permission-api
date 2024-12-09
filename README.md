@@ -249,4 +249,41 @@ Assign Permission to Role:
             "permissions": [1]
         }
 
+Step 2: Test Without Permission
+
+    URL: POST http://localhost:8000/api/roles
+    Headers:
+
+Authorization: Bearer your-api-token
+
+Body:
+
+{
+    "name": "Manager"
+}
+
+Expected Response:
+
+    {
+        "message": "Unauthorized"
+    }
+
+    If the user does not have the edit_users permission, the middleware will block the request with a 403 Forbidden status.
+
+Step 3: Assign Permission and Retry
+
+    Assign the edit_users permission to the user by assigning a role or directly associating the permission.
+
+    Retry the same request:
+        Expected Response:
+
+    {
+        "id": 1,
+        "name": "Manager",
+        "created_at": "2024-12-08T12:00:00.000000Z",
+        "updated_at": "2024-12-08T12:00:00.000000Z"
+    }
+
+This indicates the user has permission, and the middleware allows the request.
+
 
