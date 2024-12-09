@@ -14,6 +14,57 @@ This is a Laravel-based RESTful API for managing users, roles, and permissions. 
 
 ---
 
+
+## Project Directory Structure
+
+├── app
+│   ├── Console
+│   ├── Exceptions
+│   ├── Http
+│   │   ├── Controllers
+│   │   │   ├── AuthController.php
+│   │   │   ├── UserController.php
+│   │   │   ├── RoleController.php
+│   │   │   └── PermissionController.php
+│   │   ├── Middleware
+│   │   │   └── PermissionMiddleware.php
+│   ├── Models
+│   │   ├── User.php
+│   │   ├── Role.php
+│   │   └── Permission.php
+│   ├── Providers
+│   │   └── AppServiceProvider.php
+├── config
+│   ├── app.php
+│   └── auth.php
+├── database
+│   ├── migrations
+│   │   ├── xxxx_xx_xx_create_users_table.php
+│   │   ├── xxxx_xx_xx_create_roles_table.php
+│   │   ├── xxxx_xx_xx_create_permissions_table.php
+│   │   ├── xxxx_xx_xx_create_role_user_table.php
+│   │   └── xxxx_xx_xx_create_permission_user_table.php
+│   └── seeders
+│       ├── DatabaseSeeder.php
+│       └── RolesAndPermissionsSeeder.php
+├── public
+│   ├── index.php
+├── routes
+│   ├── api.php
+├── tests
+│   ├── Feature
+│   │   └── ExampleTest.php
+│   ├── Unit
+│       └── ExampleTest.php
+├── storage
+├── vendor
+├── .env
+├── composer.json
+├── package.json
+├── PostmanCollection.json
+└── README.md
+
+
 ## 🛠️ Installation Guide
 
 ### Prerequisites
