@@ -14,6 +14,61 @@ This is a Laravel-based RESTful API for managing users, roles, and permissions. 
 
 ---
 
+## Files 
+
+📂 Routes
+
+    routes/api.php
+
+📂 Controllers
+
+    app/Http/Controllers/AuthController.php
+    app/Http/Controllers/UserController.php
+    app/Http/Controllers/RoleController.php
+    app/Http/Controllers/PermissionController.php
+
+📂 Models
+
+    app/Models/User.php
+    app/Models/Role.php
+    app/Models/Permission.php
+
+📂 Middleware
+
+    app/Http/Middleware/PermissionMiddleware.php
+
+📂 Database Migrations
+
+    database/migrations/xxxx_xx_xx_XXXXXX_create_users_table.php
+    database/migrations/xxxx_xx_xx_XXXXXX_create_roles_table.php
+    database/migrations/xxxx_xx_xx_XXXXXX_create_permissions_table.php
+    database/migrations/xxxx_xx_xx_XXXXXX_create_permission_user_table.php
+    database/migrations/xxxx_xx_xx_XXXXXX_create_role_user_table.php
+
+📂 Passport Configuration
+
+    app/Providers/AuthServiceProvider.php
+    config/auth.php
+
+📂 Seeders
+
+    database/seeders/
+
+📂 Postman Collection
+
+    /PostmanCollection.json
+
+📂 README
+
+    README.md
+
+📂 Configuration
+
+    .env
+    config/passport.php
+
+--
+
 ## 🛠️ Installation Guide
 
 ### Prerequisites
